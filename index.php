@@ -1,3 +1,8 @@
-<?php echo "Halo dari php";
+<?php include 'config/sambung.php' ?>
 
+
+<?php 
+$user = User::all();
+
+print_r($user);
  ?>
