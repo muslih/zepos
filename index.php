@@ -8,8 +8,11 @@
 // panggil fungsi
 include('config/functions.php');
 include('view/partials/header.php'); 
+
 konek();
 ?>
+<script src="./public/js/plugins/morris/morris.min.js"></script>
+<script src="./public/js/plugins/morris/morris-data.js"></script> 
 <?php 
 if(isset($_GET['permintaan']) && $_GET['permintaan'] == 'cetak_resi'){
     include 'view/page/mesin/cetak_resi.php';
@@ -24,7 +27,7 @@ if(isset($_GET['permintaan']) && $_GET['permintaan'] == 'cetak_resi'){
         <!-- Navigation -->
         <?php 
         // if (isset($_SESSION['user'])){ 
-        //     include 'view/partials/nav.php';
+            include 'view/partials/nav.php';
             include 'view/partials/section.php';
         // }else{
         //     include 'view/login.php';
@@ -61,8 +64,7 @@ if(isset($_GET['permintaan']) && $_GET['permintaan'] == 'cetak_resi'){
     
     <!-- Morris Charts JavaScript -->
     <script src="./public/js/plugins/morris/raphael.min.js"></script>
-    <script src="./public/js/plugins/morris/morris.min.js"></script>
-    <script src="./public/js/plugins/morris/morris-data.js"></script>   
+      
     <script src="./public/js/plugins/dataTables/jquery.dataTables.js"></script>
     <script src="./public/js/plugins/dataTables/dataTables.bootstrap.js"></script>
     <!-- Custom Theme JavaScript -->
